@@ -1,0 +1,19 @@
+﻿<Window x:Class="Saludo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Saludo" Height="325" Width="579">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="458*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="116,87,0,0" TextWrapping="Wrap" Text="Escribe tu nombre" VerticalAlignment="Top" FontSize="24
+                   " FontFamily="SimSun" Width="216" Grid.Column="4"/>
+        <TextBox x:Name="nombreUsuario" HorizontalAlignment="Left" Height="23" Margin="116,134,0,0" TextWrapping="Wrap" Text="Escribe Aquí" VerticalAlignment="Top" Width="216" Grid.Column="4"/>
+        <Button x:Name="enviar" Content="Enviar" HorizontalAlignment="Left" Margin="355,133,0,0" VerticalAlignment="Top" Width="75" Grid.Column="4" Click="enviarClick"/>
+
+    </Grid>
+</Window>
