@@ -24,7 +24,7 @@ namespace Methods
         {
             InitializeComponent();
         }
-
+      
         private void calculateClick(object sender, RoutedEventArgs e)
         {
             int calculatedValue = 0;
