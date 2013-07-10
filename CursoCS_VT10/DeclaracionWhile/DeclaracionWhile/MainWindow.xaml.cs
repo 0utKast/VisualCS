@@ -45,7 +45,7 @@ namespace DeclaracionWhile
             displayData(reader);
         }
 
-        private void displayData(TextReader reader)
+       /* private void displayData(TextReader reader)
         {
             source.Text = "";
             string line = reader.ReadLine();
@@ -54,8 +54,17 @@ namespace DeclaracionWhile
                 source.Text += line + '\n';
                 line = reader.ReadLine();
             }
-            reader.Close();
+            reader.Close();*/
 
+        private void displayData(TextReader reader)
+        {
+            source.Text = "";
+            for (string line = reader.ReadLine(); line != null; line = reader.ReadLine())
+            {
+                source.Text += line + '\n';
+            }
+
+            reader.Close();
         }
     }
 }

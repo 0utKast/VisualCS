@@ -1,0 +1,47 @@
+﻿<Window x:Class="MathsOperators.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Operadores Matemáticos" Height="400" Width="765.6">
+    <Grid>
+        <Grid Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="13*"/>
+                <RowDefinition Height="28*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="110*" />
+                <RowDefinition Height="13*" />
+                <RowDefinition Height="28*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="28*" />
+                <RowDefinition Height="13*" />
+                <RowDefinition Height="27*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="14*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="56*" />
+                <ColumnDefinition Width="154*"/>
+                <ColumnDefinition Width="315*" />
+                <ColumnDefinition Width="209*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="lhs" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="Operando 1" FontSize="22" Grid.ColumnSpan="2" Margin="47,0,46,0"/>
+            <TextBlock x:Name="rhs" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="Operando 2" FontSize="22" Margin="46,0"/>
+            <TextBox x:Name="lhsOperand" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" FontSize="18" Grid.ColumnSpan="2" Margin="5,0" />
+            <TextBox x:Name="rhsOperand" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" FontSize="18" Margin="5,0,4,0" />
+            <StackPanel x:Name="operators" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="87,2">
+                <RadioButton x:Name="addition" VerticalAlignment="Top" Content="+ Suma" FontSize="18" Checked="addition_Checked" />
+                <RadioButton x:Name="subtraction" VerticalAlignment="Top" Content="- Resta" FontSize="18" />
+                <RadioButton x:Name="multiplication" VerticalAlignment="Top" Content="* Multiplicación" FontSize="18" />
+                <RadioButton x:Name="division" VerticalAlignment="Top" Content="/ División" FontSize="18" />
+                <RadioButton x:Name="remainder" VerticalAlignment="Top" Content="% Resto" FontSize="18" />
+            </StackPanel>
+            <Button x:Name="calculate" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Calcular" FontSize="18" Click="calculateClick" Width="100" Grid.ColumnSpan="2" Margin="55,1" />
+            <TextBlock Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Expresión:" FontSize="18" Margin="5,3,61,3" />
+            <TextBlock x:Name="expression" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="18" Margin="0,3" />
+            <TextBlock Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Resultado:" FontSize="18" Margin="10,5,35,0" Width="109" Grid.Column="1" />
+            <TextBlock x:Name="result" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="18" Margin="0,3,0,2" />
+            <Button x:Name="quit" Grid.Row="11" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Salir" FontSize="18" Click="quitClick" Width="100" Grid.ColumnSpan="2" Margin="55,0" />
+        </Grid>
+    </Grid>
+</Window>
