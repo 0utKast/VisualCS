@@ -1,0 +1,58 @@
+﻿<Window x:Class="Cartas.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Juego Cartas" Height="450" Width="750">
+    <Window.Resources>
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="BorderBrush" Value="CadetBlue"/>
+            <Setter Property="Background" Value="Bisque"/>
+        </Style>        
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" ><Run Language="es-es" Text="Juego de Cartas"/></TextBlock>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="14*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Text="Norte" FontSize="18" Margin="56,-2,56,277" Grid.RowSpan="2" Height="24" VerticalAlignment="Bottom" />
+            <TextBlock Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Sur" FontSize="18" />
+            <TextBlock Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Este" FontSize="18" />
+            <TextBlock Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Oeste" FontSize="18" />
+            <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource BorderStyle}">
+                <TextBlock x:Name="norte" Margin="10" HorizontalAlignment="Left" FontSize="13" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="3" Style="{StaticResource BorderStyle}">
+                <TextBlock x:Name="sur" Margin="10" HorizontalAlignment="Left" FontSize="13" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="5" Style="{StaticResource BorderStyle}">
+                <TextBlock x:Name="este" Margin="10" HorizontalAlignment="Left" FontSize="13" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="7" Style="{StaticResource BorderStyle}">
+                <TextBlock x:Name="oeste" Margin="10" HorizontalAlignment="Left" FontSize="13" />
+            </Border>
+         </Grid>
+        <Button Grid.Row="4" Content="Repartir" HorizontalAlignment="Center" Width="60" Height="25" Click="dealClick"/>
+    </Grid>
+</Window>
+
