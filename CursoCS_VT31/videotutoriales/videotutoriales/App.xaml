@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="videotutoriales.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:videotutoriales"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <Style x:Key="EstiloTextoVerde" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="SelectionHighlightColor" Value="{ThemeResource TextSelectionHighlightColorThemeBrush}"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Typography.StylisticSet20" Value="True"/>
+            <Setter Property="Typography.DiscretionaryLigatures" Value="True"/>
+            <Setter Property="Typography.CaseSensitiveForms" Value="True"/>            
+            <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+            <Setter Property="TextLineBounds" Value="TrimToBaseline"/>
+            <Setter Property="OpticalMarginAlignment" Value="TrimSideBearings"/>
+            <Setter Property="Foreground" Value="Green"/>
+        </Style>
+    </Application.Resources>
+
+</Application>
